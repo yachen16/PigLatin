@@ -1,11 +1,12 @@
 public void setup() 
 {
-	/*String[] lines = loadStrings("words.txt");
+	String[] lines = loadStrings("words.txt");
 	System.out.println("there are " + lines.length + " lines");
 	for (int i = 0 ; i < lines.length; i++) 
 	{
 	  System.out.println(pigLatin(lines[i]));
-	}*/
+	}
+  System.out.println(" ");
   String[] words = loadStrings("LowellHymn.txt");
   System.out.println("there are " + words.length + " lines");
   for (int i = 0 ; i < words.length; i++){
@@ -28,19 +29,19 @@ public int findFirstVowel(String sWord)
 //postcondition: returns the position of the first vowel in sWord.  If there are no vowels, returns -1
 {
   for(int i = 0; i < sWord.length(); i ++){
-    if(sWord.substring(i, i+1).equals("a")){
+    if(sWord.substring(i, i+1).equals("a") || sWord.substring(i, i+1).equals("A")){
       return i;
     }
-    if(sWord.substring(i, i+1).equals("e")){
+    if(sWord.substring(i, i+1).equals("e") || sWord.substring(i, i+1).equals("E")){
       return i;
     }
-    if(sWord.substring(i, i+1).equals("i")){
+    if(sWord.substring(i, i+1).equals("i") || sWord.substring(i, i+1).equals("I")){
       return i;
     }
-    if(sWord.substring(i, i+1).equals("o")){
+    if(sWord.substring(i, i+1).equals("o") || sWord.substring(i, i+1).equals("O")){
       return i;
     }
-    if(sWord.substring(i, i+1).equals("u")){
+    if(sWord.substring(i, i+1).equals("u") || sWord.substring(i, i+1).equals("U")){
       return i;
     }
   }
